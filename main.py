@@ -235,7 +235,7 @@ def send_message(to_user, access_token, city_name, weather, max_temperature, min
         "topcolor": "#FF0000",
         "data": {
             "date": {
-                "value": '今天是：' + datedays.gettomorrow() + ' ' + week,
+                "value": '今天是：' + str(datedays.gettomorrow()) + ' ' + week,
                 "color": get_color()
             },
             "city": {
