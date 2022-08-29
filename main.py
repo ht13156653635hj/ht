@@ -1,6 +1,7 @@
 import random
 from time import time, localtime
 import cityinfo
+import datedays
 from requests import get, post
 from datetime import datetime, date
 from zhdate import ZhDate
@@ -234,7 +235,7 @@ def send_message(to_user, access_token, city_name, weather, max_temperature, min
         "topcolor": "#FF0000",
         "data": {
             "date": {
-                "value": '今天是：' + "{} {}".format(today, week),
+                "value": '今天是：' + datedays.gettomorrow() + ' ' + week,
                 "color": get_color()
             },
             "city": {
